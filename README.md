@@ -1,5 +1,5 @@
 # Sine_Source_Model_RNM
-
+```bash
 setenv GIT_ROOT `git rev-parse --show-toplevel`
 setenv UVM_WORK $GIT_ROOT/work/sim
 mkdir -p $UVM_WORK && cd $UVM_WORK
