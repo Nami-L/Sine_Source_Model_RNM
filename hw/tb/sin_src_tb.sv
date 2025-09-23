@@ -9,15 +9,17 @@ module tb;
     );
 
     initial begin
-        $display("Tiempo(ns)   Seno(V)");
-        repeat (40) begin
-            #1;
-            $display("%t   %f", $time, out_sine);
+        $display("Tiempo(ps)   Seno(V)");
+        repeat (1000) begin
+            #(50ps);
+            $display("%10t: %6.3f", $realtime, out_sine);
         end
         $finish;
     end
     initial begin
-    $timeformat(-9, 1, "ns", 10);
+                // Configurar formato de tiempo para mejor visualización
+        //$timeformat(-12, 3, " ps", 8);
+    $timeformat(-12, 1, "ps", 10);
     $fsdbDumpvars;  // Synopsys VCS
   end
 

@@ -46,7 +46,7 @@ FILES     = $(TB_FILES) $(RTL_FILES)  $(C_FILES)
 # Propósito: Compilación de tu proyecto SystemVerilog/Verilog usando VCS de Synopsys. Es decir, convierte tu código fuente en un binario ejecutable (simv) que después vas a simular.
 VCS_FLAGS = -full64 -sverilog \
             -lca -debug_access+all -kdb \
-            -timescale=1ns/10ps $(FILES) -l comp.log \
+            -timescale=1ns/1ps $(FILES) -l comp.log \
             -cc gcc \
             -cpp g++ \
             -top tb \
