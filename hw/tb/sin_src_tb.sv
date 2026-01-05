@@ -10,6 +10,7 @@ module tb;
         .out(out_sine)
     );
 
+<<<<<<< HEAD
     initial begin
         $display("Tiempo(ps)   Seno(V)");
         repeat (100) begin
@@ -21,15 +22,32 @@ module tb;
        // si pongo 10, tendre 100 muestras, es decir 10*100=1000 y esto es 1ns, y como el repeat es de 1000*10=10.000 osea 10 ciclos pero con mas muestras mas fino
             #(10ps); // tiempo para la simulacion
             $display("%10t: %6.3f", $realtime, out_sine);
+=======
+     initial begin
+        $timeformat(-12, 1, "ps", 10);
+        $display("Tiempo(ps)   Seno(V)");
+
+        repeat (21) begin
+            #(50ps);
+            $display("%t   %f", $realtime, out_sine);
+>>>>>>> f0ea3fd (feat: modificacion tb)
         end
+
         $finish;
+
     end
+
     initial begin
+<<<<<<< HEAD
                 // Configurar formato de tiempo para mejor visualización
         //$timeformat(-12, 3, " ps", 8);
     $timeformat(-12, 1, "ps", 10);
     $fsdbDumpvars;  // Synopsys VCS
   end
+=======
+        $fsdbDumpvars;
+    end
+>>>>>>> f0ea3fd (feat: modificacion tb)
 
 
 endmodule

@@ -23,7 +23,7 @@ GIT_DIR := $(shell git rev-parse --show-toplevel)#siempre tenemos el directorio 
 RUN_DIR := $(GIT_DIR)/work
 RTL_DIR := $(GIT_DIR)/hw/rtl
 TB_DIR  := $(GIT_DIR)/hw/tb
-C_DIR   := $(GIT_DIR)/hw/c
+#C_DIR   := $(GIT_DIR)/hw/c
 
 # Simulation configuration
 SEED      ?= 1
@@ -40,7 +40,7 @@ endif
 RTL_FILES := $(shell find $(RTL_DIR) -name "*.sv" -or -name "*.v")
 TB_FILES  := $(shell find $(TB_DIR) -name "*.sv" -or -name "*.v")
 C_FILES   := $(shell find $(C_DIR) -name "*.c" -or -name "*.c++")
-FILES     = $(TB_FILES) $(RTL_FILES)  $(C_FILES)
+FILES     = $(TB_FILES) $(RTL_FILES)  #$(C_FILES)
 
 # Synopsys VCD/SIMV options
 # Propósito: Compilación de tu proyecto SystemVerilog/Verilog usando VCS de Synopsys. Es decir, convierte tu código fuente en un binario ejecutable (simv) que después vas a simular.

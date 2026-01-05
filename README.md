@@ -10,7 +10,7 @@ ln -sf $GIT_ROOT/hw/Makefile/Makefile.vcs Makefile
 #source setup_synopsys_eda.tcsh
 
 
-Colocar la siguiente linea para crear un link 
+#Colocar la siguiente linea para crear un link 
 
-$ ln -sf Makefile/Makefile.vcs Makefile 
+#$ ln -sf Makefile/Makefile.vcs Makefile 
 
